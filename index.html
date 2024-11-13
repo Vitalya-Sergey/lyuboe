@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles/pages/index.css">
+    <link rel="stylesheet" href="styles/settings.css">
+
+    <title>Новая Жизнь | Главная</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">New Live</a>
+            <ul>
+                <li>
+                    <a href=".html">Поиск</a>
+                </li>
+                <li><a href=".html">Регистрация</a>
+                </li>
+                <li><a href=".html">Личный кабинет</a>
+                </li>
+                <li><a href=".html">Добавить</a>
+                </li>
+                <li><a href=".html">Отзывы</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/d.jpg" alt="Найденный кот">
+                            <div class="animal-info">
+                                <h3>Кот</h3>
+                                <p>Найден в парке, заблудился во время прогулки.</p>
+                                <a href="#details-cat" class="details-button">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/h.jpg" alt="Найденная собака">
+                            <div class="animal-info">
+                                <h3>Собака</h3>
+                                <p>Нашли на улице, искала своего хозяина.</p>
+                                <a href="#details-dog" class="details-button">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/v.jpg" alt="Найденный вомбат">
+                            <div class="animal-info">
+                                <h3>кот</h3>
+                                <p>Найден в лесу, возможно, сбежал из питомника.</p>
+                                <a href="#details-wombat" class="details-button">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/v.jpg" alt="Найденный вомбат">
+                            <div class="animal-info">
+                                <h3>кот</h3>
+                                <p>Найден в лесу, возможно, сбежал из питомника.</p>
+                                <a href="#details-wombat" class="details-button">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>
