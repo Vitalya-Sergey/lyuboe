@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="lib/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/pages/index.css">
     <link rel="stylesheet" href="styles/settings.css">
 
@@ -17,15 +18,15 @@
             <a href="index.html" class="logo">New Live</a>
             <ul>
                 <li>
-                    <a href=".html">Поиск</a>
+                    <a href=".html">Поиск  <i class="fa fa-search" aria-hidden="true"></i></a>
                 </li>
-                <li><a href=".html">Регистрация</a>
+                <li><a href=".html">Регистрация  <i class="fa fa-at" aria-hidden="true"></i></a>
                 </li>
-                <li><a href=".html">Личный кабинет</a>
+                <li><a href=".html">Личный кабинет  <i class="fa fa-user" aria-hidden="true"></i></a>      
                 </li>
-                <li><a href=".html">Добавить</a>
+                <li><a href=".html">Добавить  <i class="fa fa-plus" aria-hidden="true"></i></a>
                 </li>
-                <li><a href=".html">Отзывы</a>
+                <li><a href=".html">Отзывы  <i class="fa fa-commenting" aria-hidden="true"></i></a>
                 </li>
             </ul>
         </div>
@@ -55,7 +56,7 @@
                         <div class="swiper-slide">
                             <img src="img/v.jpg" alt="Найденный вомбат">
                             <div class="animal-info">
-                                <h3>кот</h3>
+                                <h3>Кот</h3>
                                 <p>Найден в лесу, возможно, сбежал из питомника.</p>
                                 <a href="#details-wombat" class="details-button">Подробнее</a>
                             </div>
@@ -63,7 +64,7 @@
                         <div class="swiper-slide">
                             <img src="img/v.jpg" alt="Найденный вомбат">
                             <div class="animal-info">
-                                <h3>кот</h3>
+                                <h3>Кот</h3>
                                 <p>Найден в лесу, возможно, сбежал из питомника.</p>
                                 <a href="#details-wombat" class="details-button">Подробнее</a>
                             </div>
@@ -74,6 +75,48 @@
                 </div>
 
         </section>
+
+<section class="short-search"> 
+    <div class="container">
+        <form>
+            <label for="type-animal"> Вид животного</label>
+            <select class="sel" name="type-animal" id="type-animal">
+                <option value="cat">кот</option>
+                <option value="cat">собака</option>
+                <option value="cat">другое</option>
+            </select>
+            <button class="bu" type="submit">Поиск  <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+           
+
+        </form>
+    </div>
+</section>
+
+<section class="facts">
+<div class="container">
+<h2>Факты</h2>
+<ul>
+    <li>
+        <i class="fa fa-paw" aria-hidden="true"></i>
+        <h3>Помогли найти более 500 животных</h3>
+    </li>
+    <li>
+        <i class="fa fa-tag" aria-hidden="true"></i>
+        <h3>Более трех лет способствуем возвращению питомцев к хозяевам.</h3>
+    </li>
+    <li>
+        <i class="fa fa-angellist" aria-hidden="true"></i>
+
+        <h3>Все услуги оказываются бесплатно.</h3>
+    </li>
+</ul>
+
+</div>
+</section>
+
+
+
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
