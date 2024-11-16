@@ -138,16 +138,17 @@ img {
     border-radius: 5px;
 }
 
-.facts{
+.facts .container{
+    border-radius: 5px;
     background-color: #e0ffc8;
-    height: 100px;
+    height: 200px;
+    width: 1240px;
 }
 
 .facts{
     display: flex;
     padding: 50px 0;
-    background-color:  #e0ffc8;
-
+    height: 100px;
 }
 .facts h2{
     display: flex;
@@ -163,4 +164,58 @@ img {
     flex-wrap: wrap;
 }
 
+/*ser*/
+.search{
+    margin-top: 3%;
+    gap: 56px;
+    padding: 96px 0px;
+}
 
+.search .container{
+    display: flex;
+    gap: 56px;
+    justify-content: center;
+    align-items: center;
+    background-color:  #e0ffc8;
+    height: 300px;
+}
+.search form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.search_item{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+/* sw*/
+.reviews .container {
+    background-color:  #e0ffc8;
+    
+}
+.container h2{
+    display: flex;
+    font-size: 32px;
+    font-weight: bold;
+    align-items: center;
+    margin: 0 0 64px;
+}
+
+.an {
+    padding: 10px;
+    border-radius: 5px;
+    bottom: 10px;
+    left: 10px;
+    width: 330px;
+    margin-left:17%;
+}
+
+.an h3 {
+    margin: 0;
+}
+
+.an p {
+    margin: 5px 0;
+}
