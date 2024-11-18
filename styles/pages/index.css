@@ -166,7 +166,7 @@ img {
 
 /*ser*/
 .search{
-    margin-top: 3%;
+    margin-top: 2%;
     gap: 56px;
     padding: 96px 0px;
 }
@@ -178,6 +178,7 @@ img {
     align-items: center;
     background-color:  #e0ffc8;
     height: 300px;
+    border-radius: 5px;
 }
 .search form{
     display: flex;
@@ -193,6 +194,7 @@ img {
 /* sw*/
 .reviews .container {
     background-color:  #e0ffc8;
+    border-radius: 5px;
     
 }
 .container h2{
@@ -219,3 +221,95 @@ img {
 .an p {
     margin: 5px 0;
 }
+
+
+/*sub*/
+.sub{
+    margin-top: 2%;
+    padding: 50px 0;
+    color: black;
+    border-radius: 5px;
+}
+
+.sub .container{
+    background-color:  #e0ffc8;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.sub label{
+    display: flex;
+    margin-top: 7%; 
+    font-size: 8px;
+}
+
+.sub form{
+
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.bu{
+display: inline-block;
+padding: 5px 10px;
+background-color: #4CAF50;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+}
+
+.ema{
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-color: green; 
+}
+
+footer{
+    margin-top: 2%;
+    padding: 50px 0;
+    color: black;
+    border-radius: 5px;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #4CAF50;
+    height: 250px;
+}
+
+.footer_item ul,
+.footer_item{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer_item i {
+    background: linear-gradient(to right, 
+        #ff0000, /* красный */
+        #ff8000, /* оранжевый */
+        #ffff00, /* желтый */
+        #00ff00, /* зеленый */
+        #0000ff, /* синий */
+        #4b0082, /* индиго */
+        #9400d3  /* фиолетовый */
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: rainbow 5s linear infinite;
+}
+@keyframes rainbow {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+
