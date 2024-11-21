@@ -1,0 +1,60 @@
+body, html { height: 100%;}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(221, 221, 221);
+}
+.nn {
+   width: 30%;
+   border: 2px solid black;
+   border-radius: 5%;
+   height: auto;
+   background: linear-gradient(
+    #1a76ee 0%,
+    #34d4e9 40%,
+    #37c713 90%,
+    #1c8502 100%
+  );
+}
+form{
+    margin-left: 5%;
+}
+h1{ 
+    display: flex;
+    font-size: 48px;
+    justify-content: center;
+}
+
+label{
+    display: block;
+    margin: 0 0 12px;
+    
+}
+input{
+    width: 100%;
+    margin: 0 0 32px;
+    width: 90%;
+    height: 22px;
+    border: 0;
+        border-bottom: 1px solid #000;
+        background-color: rgba(0,0,0,0);
+        outline: 0; 
+    
+}
+button{ 
+    width: 90px;
+    height: 27px;
+    color: azure;
+    background-color: rgb(54, 22, 236);
+}
+
+.nn a{
+    margin-left: 5%;
+}
+
+a:hover{
+    
+    color: rgb(48, 217, 240);
+}
