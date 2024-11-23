@@ -1,0 +1,129 @@
+html, body{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header{
+    padding: 64px 0;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    height: 150px;
+}
+
+header a{
+    margin-top: 3%;
+    text-decoration: none;
+    color: black;
+    font-size: 35px;
+}
+
+.info .container{
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    background-color: #e0ffc8;
+    border-radius: 5%;
+    height: 350px;
+    width: 800px;
+}
+
+
+.info li{
+    font-size: 20px;
+    margin: 0 0 32px;
+    
+}
+
+.info li a{
+    font-size: 20px;
+    margin: 0 0 32px;
+    color: black;
+    text-decoration: none;
+}
+
+.info li a:hover{
+    font-size: 20px;
+    margin: 0 0 32px;
+    color: rgb(40, 75, 0);
+    text-decoration:underline;
+}
+
+img{
+    border-radius: 5%;
+}
+
+i {
+    background: linear-gradient(to right, 
+        #5eeb00, /* красный */
+        #006d00, /* оранжевый */
+        #006d00, /* оранжевый */
+        #00ff00, /* зеленый */
+        #10bb00, /* синий */
+        #009231  /* фиолетовый */
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: rainbow 5s linear infinite;
+}
+@keyframes rainbow {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+
+/* hero */
+.hero{
+padding: 66px;
+}
+.hero .container{
+    background-color: #e0ffc8;
+    height: 400px;
+    }
+.hero h2{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+.hero select{
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.hero ul{
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64;
+}
+.hero li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+.hero img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.hero img:hover{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    opacity: 0.7;
+}
