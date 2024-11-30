@@ -59,3 +59,31 @@ a:hover{
     
     color: rgb(48, 217, 240);
 }
+
+@media(max-width: 767.98px) {    
+.nn {
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 5%;
+    height: auto;
+    background: linear-gradient(
+     #1a76ee 0%,
+     #34d4e9 40%,
+     #37c713 90%,
+     #1c8502 100%
+   );
+ }}
+
+ @media(max-width: 575.8px) {    
+    .nn {
+        width: 70%;
+        border: 2px solid black;
+        border-radius: 5%;
+        height: auto;
+        background: linear-gradient(
+         #1a76ee 0%,
+         #34d4e9 40%,
+         #37c713 90%,
+         #1c8502 100%
+       );
+     }}

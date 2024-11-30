@@ -7,7 +7,7 @@ body {
     background-color: rgb(221, 221, 221);
 }
 .nn {
-   width: 25%;
+   width: 50%;
    border: 2px solid black;
    border-radius: 5%;
    height: auto;
@@ -21,8 +21,8 @@ body {
 form{
     margin-left: 5%;
 }
-h1{ 
-    display: flex;
+h1{
+    display: flex; 
     font-size: 48px;
     justify-content: center;
     margin-top: 30px;
@@ -54,6 +54,43 @@ button{
     margin-left: 5%;
 }
 a:hover{
-    
     color: rgb(48, 217, 240);
 }
+
+/* adapt */
+@media(max-width: 575.98px) { 
+  h1{
+    display: flex;
+    font-size: 22px;}
+.nn {
+        width: 50%;
+        border: 2px solid black;
+        border-radius: 5%;
+        height: auto;
+        background: linear-gradient(
+         #1a76ee 0%,
+         #34d4e9 40%,
+         #37c713 90%,
+         #1c8502 100%
+       );
+     }
+       
+}
+@media(max-width: 991px) {
+    .container {
+      width: 990px;
+      margin: 0 auto;
+    }
+    .nn {
+        width: 50%;
+        border: 2px solid black;
+        border-radius: 5%;
+        height: auto;
+        background: linear-gradient(
+         #1a76ee 0%,
+         #34d4e9 40%,
+         #37c713 90%,
+         #1c8502 100%
+       );
+     }
+  }

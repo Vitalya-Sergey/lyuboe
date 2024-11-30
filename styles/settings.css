@@ -139,3 +139,32 @@ table {
     padding: 0 16px;
     margin: 0 auto;
 }
+
+@media(max-width: 575.98px) { 
+       
+}
+  
+@media(max-width: 767.98px) {    
+}
+  /* Планшеты */
+  @media(max-width: 991px) {
+    .container {
+      max-width: 990px;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Настольные компьютеры */
+  @media(max-width: 1400px) {
+    body{
+       
+      }
+  }
+   /* Ноутбуки */
+  @media(max-width: 1200px) {
+      body{
+        
+      }
+  }
+
+ 
