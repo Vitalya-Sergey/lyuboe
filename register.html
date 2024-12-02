@@ -11,17 +11,22 @@
 
     <div class="nn">
         <h1>Регистрация</h1>
-        <form>
+        <form method="POST" action="api/register.php" class="register-form">
             <label for="name">Имя</label>
             <input type="name" name="name" id="name" placeholder="Введите имя">
+
             <label for="surname">Фамилия</label>
             <input type="surname" name="surname" id="surname" placeholder="Введите фамилию">
-            <label for="dok num">Номер документа</label>
-            <input type="name" name="dok num" id="dok num" placeholder="Введите номер документа">
+
+            <label for="email">email</label>
+            <input type="email" name="email" id="email" placeholder="Введите email">
+
             <label for="phone">Номер телефона</label>
             <input type="tel" name="phone" id="phone" placeholder="Введите номер телефона">
+
             <label for="password">Пароль</label>
             <input type="password" name="password" id="password" placeholder="Введите пароль">
+            
             <label for="password">Повтор пароля</label>
             <input type="password" name="password" id="password" placeholder="Введите пароль повторно">
     
