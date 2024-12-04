@@ -1,5 +1,5 @@
 <?php
-$bd = new PDO(
+$db = new PDO(
     'mysql:host=localhost;dbname=new_life;charset=utf8', 
     'root',
      null, 

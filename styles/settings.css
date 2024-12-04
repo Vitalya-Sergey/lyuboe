@@ -166,5 +166,8 @@ table {
         
       }
   }
+  .error{
+    color: red;
+  }
 
  
