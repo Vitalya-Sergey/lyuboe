@@ -15,13 +15,17 @@
 
     <div class="nn">
     <?php
-        function showError($field){
-            $listErrors = $_SESSION['register-errors'];
+        function showError($field){     
+            if(!array_key_exists('register-errors', $_SESSION)){
+                    echo'';
+            } else{
+                $listErrors = $_SESSION['register-errors']; 
             if (array_key_exists($field, $listErrors)){  
                 $error = implode(',', $listErrors[$field]); 
                  echo "<span class='error'>$error</span>";
-            }
+            }    
         }
+     }
         ?>
     
         <form method="POST" action="api/registrationUser.php" class="register-form">
@@ -62,7 +66,7 @@
             <input type="checkbox"  name="agree" id="agree">
 
             <button type="submit">Регистрация</button>
-            <a href="login.html">Авторизация</a>
+            <a href="login.php">Авторизация</a>
             <a href="index.html">Главная</a>
             
         </div>

@@ -34,10 +34,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
 
     $phone = $formData['phone'];
-    $user = $db->query("SELECT id FROM users WHERE phone = '$phone'"
+    $email = $formData['email'];
+    $user = $db->query("SELECT phone, email FROM users WHERE phone = '$phone' OR email = '$email'"
     )->fetchAll();
     if(!empty($user)){
+        if($user[0]['phone'] == $phone){
         $errors['phone'][] = 'TAKOY UZE ECT';
+    }   
+        if($user[0]['email'] == $email){
+        $errors['email'][] = 'TAKOY UZE ECT';
+    }
     }
 
     if (empty($errors)){
@@ -61,11 +67,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $_SESSION['register-errors'] = $errors;
         header('Location: ../register.php');
     }
-
     echo json_encode($errors);
     exit;
 }
-
 ?>
 
 

@@ -1,3 +1,5 @@
+<?php session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +13,13 @@
 <body>
     <div class="nn">
     <h1>Авторизация</h1>
-    <form>
+    <form method="POST" action="api/authUser.php" class="login-form">
         <label for="phone">Номер телефона</label>
         <input type="tel" name="phone" id="phone" placeholder="Введите номер телефона">
         <label for="password">Пароль</label>
         <input type="password" name="password" id="password" placeholder="Введите пароль">
         <button type="submit">Вход</button>
-        <a href="register.html">Регистрация</a>
+        <a href="register.php">Регистрация</a>
         <a href="index.html">Главная</a>
     </div>
     </form>
