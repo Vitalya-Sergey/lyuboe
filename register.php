@@ -67,7 +67,7 @@
 
             <button type="submit">Регистрация</button>
             <a href="login.php">Авторизация</a>
-            <a href="index.html">Главная</a>
+            <a href="index.php">Главная</a>
             
         </div>
         </form>

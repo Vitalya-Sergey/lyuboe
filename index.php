@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,19 +16,24 @@
 <body>
     <header class="header">
         <div class="container">
-            <a href="index.html" class="logo">New Live</a>
+            <a href="index.php" class="logo">New Live</a>
             <ul>
                 <li>
-                    <a href=".html">Поиск  <i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a href="poisk.php">Поиск  <i class="fa fa-search" aria-hidden="true"></i></a>
                 </li>
-                <li><a href=".html">Регистрация  <i class="fa fa-at" aria-hidden="true"></i></a>
+                <li><a href="register.php">Регистрация  <i class="fa fa-at" aria-hidden="true"></i></a>
                 </li>
-                <li><a href=".html">Личный кабинет  <i class="fa fa-user" aria-hidden="true"></i></a>      
+                <li><a href="user.php">Личный кабинет  <i class="fa fa-user" aria-hidden="true"></i></a>      
                 </li>
-                <li><a href=".html">Добавить  <i class="fa fa-plus" aria-hidden="true"></i></a>
+                <li><a href="add.php">Добавить  <i class="fa fa-plus" aria-hidden="true"></i></a>
                 </li>
-                <li><a href=".html">Отзывы  <i class="fa fa-commenting" aria-hidden="true"></i></a>
+                <li><a href="info.php">Отзывы  <i class="fa fa-commenting" aria-hidden="true"></i></a>
                 </li>
+                <?php if(array_key_exists('token', $_SESSION)){
+                    echo"<li><a class='reviews' href='api/logoutUser.php'>Выход  <i class='fa fa-sign-out' aria-hidden='true'></i> </a> </li>";
+                }
+                ?>
+
             </ul>
         </div>
     </header>
@@ -212,18 +218,19 @@
             <div class="footer_item">
             <ul>
                 <li>
-                    <a href="logo">Главная</a>
+                    <a href="index.php">Главная</a>
                 </li>
-                <li><a href=".html">Регистрация</a>
+                <li><a href="register.php">Регистрация</a>
                 </li>
-                <li><a href=".html">Авторизация</a>      
+                <li><a href="login.php">Авторизация</a>      
                 </li>
-                <li><a href=".html">Личный кабинет</a>
+                <li><a href="user.php">Личный кабинет</a>
                 </li>
-                <li><a href=".html">Найденно животное</a>
+                <li><a href="info.php">Найденно животное</a>
                 </li>
-                <li><a href=".html">Поиск</a>
+                <li><a href="poisk.php">Поиск</a>
                 </li>
+
             </ul>
         </div>
         

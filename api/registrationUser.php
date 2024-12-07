@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $formData['surname'],
             $formData['email'],
             $formData['phone'],
-           $formData['password'],
+            $formData['password'],
             $formData['agree'] ? 1:0,
         ]);
         $_SESSION['register-errors'] =[];

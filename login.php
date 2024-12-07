@@ -37,7 +37,7 @@
         <input type="password" name="password" id="password" placeholder="Введите пароль">
         <button type="submit">Вход</button>
         <a href="register.php">Регистрация</a>
-        <a href="index.html">Главная</a>
+        <a href="index.php">Главная</a>
     </div> 
     </form>
 </body>

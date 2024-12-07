@@ -39,15 +39,27 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
 }
     
-    if (!empty($errors)){
-       echo 123;
+    if (empty($errors)){
+        $password= $formData['password'];
+        $phone= $formData['phone'];
+        $hash= time();
+        $token =base64_encode("hash=$hash&phone=$phone&password=$password");
+
+        $db->query("
+        UPDATE `users` SET api_token='$token' 
+        WHERE phone = '$phone' AND passwords = '$password'
+        ")->fetchAll();
+
+        $_SESSION['token']=$token;
+        header('Location: ../user.php');
+        
     }
 
     if (!empty($errors)){
         $_SESSION['auth-errors'] = $errors;
         header('Location: ../login.php');
     }
-    echo json_encode($errors);
+    // echo json_encode($errors);
     exit;
 }
 ?>
