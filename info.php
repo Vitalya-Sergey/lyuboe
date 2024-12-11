@@ -1,4 +1,28 @@
-<?php session_start(); ?>
+<?php session_start();
+include_once 'api/db.php';
+if (!array_key_exists('id',$_GET)){
+  header('Location: poisk.php');
+  exit;
+}
+
+$id = $_GET['id'];
+$post = $db->query("
+SELECT * FROM posts WHERE id='$id'
+")->fetchAll();
+
+if(empty($post)){
+  header('Location: poisk.php');
+  exit;
+}
+echo json_encode($post);
+
+$userId = $post[0]['user_id'];
+$user = $db->query("
+SELECT * FROM users WHERE id='$userId'
+")->fetchAll();
+echo json_encode($user);
+?>
+
  <!DOCTYPE html>
  <html lang="en">
  <head>
