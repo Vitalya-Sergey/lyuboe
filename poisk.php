@@ -5,8 +5,11 @@ $posts;
     if (!empty($searchParams)){
         $animalType = $searchParams['animal-type'];
         $address = $searchParams['address'];
+        
         $posts = $db->query("
-        SELECT * FROM posts WHERE type_animal ='$animalType' OR address='$address'
+        SELECT * FROM posts WHERE 
+        (type_animal ='$animalType' OR address='$address')
+        AND (status = 'active')
         ")->fetchAll();
 //    echo json_encode($posts);
 

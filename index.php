@@ -1,4 +1,11 @@
-<?php session_start(); ?>
+<?php session_start(); 
+include_once 'api/db.php';
+
+$post = $db->query("
+SELECT * FROM posts WHERE status = 'active' LIMIT 6
+")->fetchAll();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,38 +50,22 @@
             <div class="container">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="img/d.jpg" alt="Найденный кот">
-                            <div class="animal-info">
-                                <h3>Кот</h3>
-                                <p>Найден в парке, заблудился во время прогулки.</p>
-                                <a href="#details-cat" class="details-button">Подробнее</a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/h.jpg" alt="Найденная собака">
-                            <div class="animal-info">
-                                <h3>Собака</h3>
-                                <p>Нашли на улице, искала своего хозяина.</p>
-                                <a href="#details-dog" class="details-button">Подробнее</a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/v.jpg" alt="Найденный вомбат">
-                            <div class="animal-info">
-                                <h3>Кот</h3>
-                                <p>Найден в лесу, возможно, сбежал из питомника.</p>
-                                <a href="#details-wombat" class="details-button">Подробнее</a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/v.jpg" alt="Найденный вомбат">
-                            <div class="animal-info">
-                                <h3>Кот</h3>
-                                <p>Найден в лесу, возможно, сбежал из питомника.</p>
-                                <a href="#details-wombat" class="details-button">Подробнее</a>
-                            </div>
-                        </div>
+                        <?php
+                            foreach($post as $key => $value){
+                                $type = $value['type_animal'];
+                                $desc = $value['description'];
+                                $id = $value['id'];
+                                echo "
+                                    <div class='swiper-slide'>
+                                    <img src='img/d.jpg' alt='Найденный кот'>
+                                    <small>$type</small>
+                                    <p> $desc</p>
+                                    <a href='info.php?id=$id' class='details-button'>Подробнее</a>
+                                    </div>
+                                ";
+                            }
+                        ?>
+
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>

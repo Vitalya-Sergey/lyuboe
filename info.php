@@ -14,13 +14,13 @@ if(empty($post)){
   header('Location: poisk.php');
   exit;
 }
-echo json_encode($post);
+// echo json_encode($post);
 
 $userId = $post[0]['user_id'];
 $user = $db->query("
 SELECT * FROM users WHERE id='$userId'
 ")->fetchAll();
-echo json_encode($user);
+// echo json_encode($user);
 ?>
 
  <!DOCTYPE html>
@@ -77,14 +77,14 @@ echo json_encode($user);
                       </div>
                 </div>
                 <div class="info_item">
-                    <time datetime="29-11-2024">29-11-2024</time>
-                    <h2>Собака</h2>
-                    <p>Кировский р-н</p>
-                    <p>Lorem ipsum dolor sit ameillo sit animias.</p>
-                    <p>Иванов Иван</p>
-                    <a class="telephone" href="tel:88005553535"><i class="fa fa-phone" aria-hidden="true"></i>
-                    8(800)555-35-35</a>
-                  <a class="mail" href="mailto:mail@newlife.ru"><i class="fa fa-envelope" aria-hidden="true"></i>  mail@newlife.ru</a>
+                    <time datetime="29-11-2024"><?php echo $post [0]['date_found']; ?></time>
+                    <small> (<?php echo $post [0]['status']; ?>) </small>
+                    <h2><?php echo $post [0]['type_animal']; ?> </h2>
+                    <p><?php echo $post [0]['address']; ?> </p>
+                    <p><?php echo $post [0]['description']; ?> </p>
+                    <p><?php echo $user [0]['name'] . " " . $user [0]['surname']; ?> </p>
+                    <?php $phone =$user[0]['phone']; echo "<a class='telephone' href='tel:$phone'><i class='fa fa-phone' aria-hidden='true'></i>$phone</a>"?>
+                    <?php $email =$user[0]['email']; echo "<a class='mail' href='mailto:$email'><i class='fa fa-envelope' aria-hidden='true'></i>$email</a>"?>
                 </div>
             </div>
         </section>
