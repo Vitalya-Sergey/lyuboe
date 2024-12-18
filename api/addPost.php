@@ -24,32 +24,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Получение и валидация данных из формы
-    $animalType = filter_input(INPUT_POST, 'type', FILTER_SANITIZE_STRING);
-    $description = filter_input(INPUT_POST, 'desc', FILTER_SANITIZE_STRING);
-    $mark = filter_input(INPUT_POST, 'mark', FILTER_SANITIZE_STRING);
-    $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
-    $date = filter_input(INPUT_POST, 'date', FILTER_SANITIZE_STRING);
-
-    // Проверка на заполненность обязательных полей
-    if (empty($animalType) || empty($description) || empty($address) || empty($date)) {
-        echo "Пожалуйста, заполните все обязательные поля.";
-        exit;
-    }
-
+    $animalType = $_POST['type-animal'];
+    $description= $_POST['desc'];
+   $mark = $_POST['mark'];
+   $address = $_POST['address'];
+   $date_found = $_POST['date'];
+ 
     // Вставка данных в таблицу posts
     $stmt = $db->prepare("
         INSERT INTO posts (user_id, type_animal, description, mark, address, date_found) 
-        VALUES (:user_id, :type, :description, :mark, :address, :date)
+        VALUES (?, ?, ?, ?, ?, ?)
     ");
     
     // Выполнение запроса
     $result = $stmt->execute([
-        'user_id' => $userId['id'], // ID текущего пользователя
-        'type' => $animalType,
-        'description' => $description,
-        'mark' => $mark,
-        'address' => $address,
-        'date' => $date,
+        $userId['id'], // ID текущего пользователя
+        $animalType,
+        $description,
+        $mark,
+        $address,
+        $date_found,
     ]);
 
     // Проверка успешности вставки
