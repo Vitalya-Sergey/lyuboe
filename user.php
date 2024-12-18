@@ -31,6 +31,7 @@ if(array_key_exists('token', $_SESSION)){
     <header>
         <div class="container">
 <a href="index.php">< На главную</a>
+<a href="api/logoutUser.php" class="logout-btn">Выйти</a>
         </div>
     </header>
     

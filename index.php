@@ -75,9 +75,9 @@ SELECT * FROM posts WHERE status = 'active' LIMIT 6
 
 <section class="short-search"> 
     <div class="container">
-        <form>
+        <form method="GET" action="poisk.php">
             <label for="type-animal"> Вид животного</label>
-            <select class="sel" name="type-animal" id="type-animal">
+            <select class="sel" name="animal-type" id="animal-type">
                 <option value="cat">кот</option>
                 <option value="dog">собака</option>
                 <option value="rabbit">Кролик</option>
@@ -117,14 +117,14 @@ SELECT * FROM posts WHERE status = 'active' LIMIT 6
 
 <section class="search">
     <div class="container">
-        <form>
+        <form method="GET" action="poisk.php">
             <label for="place">Район</label>
-            <select class="sel" name="place" id="place">
-                <option value="0">Правый берег</option>
-                <option value="1">Левый берег</option>
+            <select class="sel" name="address" id="address">   
+                <option value="Правый берег">Правый берег</option>
+                <option value="Левый берег">Левый берег</option>
             </select>
             <label for="animal">Вид животного</label>
-            <select class="sel" name="animal" id="animal">
+            <select class="sel" name="animal-type" id="animal-type">
                 <option value="cat">Кот</option>
                 <option value="dog">Собака</option>
                 <option value="rabbit">Кролик</option>

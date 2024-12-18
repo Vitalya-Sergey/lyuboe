@@ -3,8 +3,10 @@ include_once 'api/db.php';
 $searchParams = $_GET;
 $posts;
     if (!empty($searchParams)){
-        $animalType = $searchParams['animal-type'];
-        $address = $searchParams['address'];
+        $animalType = array_key_exists('animal-type', $_GET)?
+            $searchParams['animal-type'] : '';
+            $address = array_key_exists('address', $_GET)?
+        $searchParams['address'] : '';
         
         $posts = $db->query("
         SELECT * FROM posts WHERE 

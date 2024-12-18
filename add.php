@@ -37,13 +37,13 @@ if(array_key_exists('token', $_SESSION)){
     <main>
         <section class="add">
         <div class="container">
-<form >
-
+<form method ="POST" action="api/addPost.php">
+<!-- 
     <label class="f" for="phone">Номер телефона</label>
     <input type="tel" name="phone" id="phone" placeholder="Введите номер телефона">
     <label for="phone">Почта</label>
     <input type="email" name="email" id="email" placeholder="Введите адрес почты">
-    <label for="type-animal"> Вид животного</label>
+    <label for="type-animal"> Вид животного</label> -->
 
     <select  name="type-animal" id="type-animal">
         <option value="cat">кот</option>
@@ -54,22 +54,20 @@ if(array_key_exists('token', $_SESSION)){
         <option value="dr">другое</option>
     </select>
 
- <label for="photo">Фотографии животного</label>
-    <input type="file" name="photo" id="photo">
 <label for="desc">Дополнительная информация</label>
     <textarea name="desc" id="desc"></textarea>
     <label for="mark">Клеймо (если есть)</label>
     <input type="text" name="mark" id="mark">
-    <select name="place" id="place">
-        <option value="0">Правый берег</option>
-        <option value="1">Левый берег</option>
+    <select name="address" id="place">
+        <option value="Правый берег">Правый берег</option>
+        <option value="Левый берег">Левый берег</option>
     </select>
     <label for="date">Дата</label>
     <input type="date" name="date" id="date">
-    <label for="agree">
+    <!-- <label for="agree">
         <input type="checkbox" name="agree" id="agree">
         Согласие на обработку персональных данных
-    </label>
+    </label> -->
     <button class="bu" type="submit">Отправить на модерацию</button>
 </form>
         </div>
